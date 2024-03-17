@@ -21,7 +21,7 @@ This Flutter app displays the current weather and forecast information.
 1. Clone the repository:
 
     ```
-    git clone [(https://github.com/fuadmuhe12/Weather-APP)]
+    git clone [https://github.com/fuadmuhe12/Weather-APP]
     ```
 
 2. Navigate to the project directory:
