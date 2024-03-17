@@ -4,9 +4,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class MainCard extends StatelessWidget {
-  final  curtemp ;
-  final  cond;
-  final IconData icon;
+  final  String curtemp ;
+  final  String cond;
+  final String icon;
 
   const MainCard(  {super.key,required this.curtemp, required this.cond , required this.icon});
 
@@ -27,11 +27,7 @@ class MainCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text('$curtemp °C', style: const TextStyle(fontSize: 26, color: Colors.white, fontWeight: FontWeight.bold),),
-                 Icon(
-                  icon,
-                  color: Colors.white,
-                  size: 50,
-                ),
+                 Image(image: NetworkImage('https:$icon')),
                  Text(cond, style: const TextStyle(fontSize: 18, color: Colors.white))
               ],
             ),

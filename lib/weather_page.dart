@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:weather_app/addtional_info.dart';
 import 'package:weather_app/main_card.dart';
 import 'package:weather_app/weather_cards.dart';
@@ -369,7 +370,7 @@ class _MyWeatherPagestate extends State {
                     ),
                     MainCard(
                         curtemp: snapshot.data['current']['temp_c'].toString(),
-                        icon: Icons.sunny,
+                        icon: snapshot.data['current']['condition']['icon'],
                         cond: snapshot.data['current']['condition']['text']
                             .toString()),
                     const SizedBox(
@@ -395,31 +396,36 @@ class _MyWeatherPagestate extends State {
                     const SizedBox(
                       height: 20,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        AdditionalInfo(
-                            label: 'Humidity',
-                            value: snapshot.data.length > 1
-                                ? snapshot.data['current']['humidity']
-                                    .toString()
-                                : "Looding ",
-                            icon: Icons.water_drop),
-                        AdditionalInfo(
-                            label: 'Wind',
-                            value: snapshot.data.length > 1
-                                ? snapshot.data['current']['wind_kph']
-                                    .toString()
-                                : 'loading',
-                            icon: Icons.air),
-                        AdditionalInfo(
-                            label: 'pressure',
-                            value: snapshot.data.length > 1
-                                ? snapshot.data['current']['pressure_mb']
-                                    .toString()
-                                : 'loading',
-                            icon: Icons.south_america_sharp)
-                      ],
+                    Center(
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            AdditionalInfo(
+                                label: 'Humidity',
+                                value: snapshot.data.length > 1
+                                    ? snapshot.data['current']['humidity']
+                                        .toString()
+                                    : "Looding ",
+                                icon: Icons.water_drop),
+                            AdditionalInfo(
+                                label: 'Wind',
+                                value: snapshot.data.length > 1
+                                    ? snapshot.data['current']['wind_kph']
+                                        .toString()
+                                    : 'loading',
+                                icon: Icons.air),
+                            AdditionalInfo(
+                                label: 'pressure',
+                                value: snapshot.data.length > 1
+                                    ? snapshot.data['current']['pressure_mb']
+                                        .toString()
+                                    : 'loading',
+                                icon: Icons.south_america_sharp)
+                          ],
+                        ),
+                      ),
                     )
 
                     //Addition inofrmation
