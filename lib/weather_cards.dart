@@ -41,81 +41,83 @@ class WeatherCard extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                CardsInd(
-                  time: data['forecast']['forecastday'][0]['hour'][0]['time']
-                      .toString()
-                      .substring(10),
-                  tempValue: data['forecast']['forecastday'][0]['hour'][0]
-                          ['temp_c']
-                      .toString(),
-                  icon: data['forecast']['forecastday'][0]['hour'][0]
-                      ['condition']['icon'],
-                ),
-                CardsInd(
-                  time: data['forecast']['forecastday'][0]['hour'][1]['time']
-                      .toString()
-                      .substring(10),
-                  tempValue: data['forecast']['forecastday'][0]['hour'][1]
-                          ['temp_c']
-                      .toString(),
-                  icon: data['forecast']['forecastday'][0]['hour'][1]
-                      ['condition']['icon'],
-                ),
-                CardsInd(
-                  time: data['forecast']['forecastday'][0]['hour'][3]['time']
-                      .toString()
-                      .substring(10),
-                  tempValue: data['forecast']['forecastday'][0]['hour'][3]
-                          ['temp_c']
-                      .toString(),
-                  icon: data['forecast']['forecastday'][0]['hour'][3]
-                      ['condition']['icon'],
-                ),
-                CardsInd(
-                  time: data['forecast']['forecastday'][0]['hour'][5]['time']
-                      .toString()
-                      .substring(10),
-                  tempValue: data['forecast']['forecastday'][0]['hour'][5]
-                          ['temp_c']
-                      .toString(),
-                  icon: data['forecast']['forecastday'][0]['hour'][5]
-                      ['condition']['icon'],
-                ),
-                CardsInd(
-                  time: data['forecast']['forecastday'][0]['hour'][7]['time']
-                      .toString()
-                      .substring(10),
-                  tempValue: data['forecast']['forecastday'][0]['hour'][7]
-                          ['temp_c']
-                      .toString(),
-                  icon: data['forecast']['forecastday'][0]['hour'][7]
-                      ['condition']['icon'],
-                ),
-                CardsInd(
-                  time: data['forecast']['forecastday'][0]['hour'][8]['time']
-                      .toString()
-                      .substring(10),
-                  tempValue: data['forecast']['forecastday'][0]['hour'][8]
-                          ['temp_c']
-                      .toString(),
-                  icon: data['forecast']['forecastday'][0]['hour'][8]
-                      ['condition']['icon'],
-                ),
-                CardsInd(
-                  time: data['forecast']['forecastday'][0]['hour'][9]['time']
-                      .toString()
-                      .substring(10),
-                  tempValue: data['forecast']['forecastday'][0]['hour'][9]
-                          ['temp_c']
-                      .toString(),
-                  icon: data['forecast']['forecastday'][0]['hour'][9]
-                      ['condition']['icon'],
-                ),
-              ],
+          Center(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  CardsInd(
+                    time: data['forecast']['forecastday'][0]['hour'][0]['time']
+                        .toString()
+                        .substring(10),
+                    tempValue: data['forecast']['forecastday'][0]['hour'][0]
+                            ['temp_c']
+                        .toString(),
+                    icon: data['forecast']['forecastday'][0]['hour'][0]
+                        ['condition']['icon'],
+                  ),
+                  CardsInd(
+                    time: data['forecast']['forecastday'][0]['hour'][1]['time']
+                        .toString()
+                        .substring(10),
+                    tempValue: data['forecast']['forecastday'][0]['hour'][1]
+                            ['temp_c']
+                        .toString(),
+                    icon: data['forecast']['forecastday'][0]['hour'][1]
+                        ['condition']['icon'],
+                  ),
+                  CardsInd(
+                    time: data['forecast']['forecastday'][0]['hour'][3]['time']
+                        .toString()
+                        .substring(10),
+                    tempValue: data['forecast']['forecastday'][0]['hour'][3]
+                            ['temp_c']
+                        .toString(),
+                    icon: data['forecast']['forecastday'][0]['hour'][3]
+                        ['condition']['icon'],
+                  ),
+                  CardsInd(
+                    time: data['forecast']['forecastday'][0]['hour'][5]['time']
+                        .toString()
+                        .substring(10),
+                    tempValue: data['forecast']['forecastday'][0]['hour'][5]
+                            ['temp_c']
+                        .toString(),
+                    icon: data['forecast']['forecastday'][0]['hour'][5]
+                        ['condition']['icon'],
+                  ),
+                  CardsInd(
+                    time: data['forecast']['forecastday'][0]['hour'][7]['time']
+                        .toString()
+                        .substring(10),
+                    tempValue: data['forecast']['forecastday'][0]['hour'][7]
+                            ['temp_c']
+                        .toString(),
+                    icon: data['forecast']['forecastday'][0]['hour'][7]
+                        ['condition']['icon'],
+                  ),
+                  CardsInd(
+                    time: data['forecast']['forecastday'][0]['hour'][8]['time']
+                        .toString()
+                        .substring(10),
+                    tempValue: data['forecast']['forecastday'][0]['hour'][8]
+                            ['temp_c']
+                        .toString(),
+                    icon: data['forecast']['forecastday'][0]['hour'][8]
+                        ['condition']['icon'],
+                  ),
+                  CardsInd(
+                    time: data['forecast']['forecastday'][0]['hour'][9]['time']
+                        .toString()
+                        .substring(10),
+                    tempValue: data['forecast']['forecastday'][0]['hour'][9]
+                            ['temp_c']
+                        .toString(),
+                    icon: data['forecast']['forecastday'][0]['hour'][9]
+                        ['condition']['icon'],
+                  ),
+                ],
+              ),
             ),
           ),
         ],
