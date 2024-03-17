@@ -10,10 +10,10 @@ This Flutter app displays the current weather and forecast information.
 
 ## Screenshots
 
-![Screenshot 1] <img src="Screenshot/Screenshot%201.jpg" width="400">
+![Screenshot 1] <img src="Screenshot/Screenshot%201.jpg" width="300">
 
-![Screenshot 2]<img src="Screenshot/Screenshot%202.jpg" width="400">
-![Screenshot 1]<img src="Screenshot/Screenshot%203.jpg" width="400">
+![Screenshot 2]<img src="Screenshot/Screenshot%202.jpg" width="300">
+![Screenshot 1]<img src="Screenshot/Screenshot%203.jpg" width="300">
 
 
 ## Installation
