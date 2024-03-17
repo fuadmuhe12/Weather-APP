@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:weather_app/addtional_info.dart';
 import 'package:weather_app/main_card.dart';
 import 'package:weather_app/weather_cards.dart';
@@ -43,7 +42,7 @@ class _MyWeatherPagestate extends State {
     Uri url = Uri(
         scheme: 'http',
         host: 'api.weatherapi.com',
-        path: 'v1/current.json',
+        path: 'v1/forecast.json',
         queryParameters: {
           'key': '9c814d122736458db8452447240903',
           'q': country ?? 'Addis Ababa',
@@ -377,7 +376,7 @@ class _MyWeatherPagestate extends State {
                       height: 20,
                     ),
 
-                    const WeatherCard(),
+                    WeatherCard(snapshot.data),
 
                     const SizedBox(
                       height: 20,
